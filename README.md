@@ -71,3 +71,15 @@ http://localhost:3000
 - **groupmessages**: Stores room messages (from_user, room, message, date_sent)
 - **privatemessages**: Stores private messages (from_user, to_user, message, date_sent)
 
+## Screenshots + Explanation
+![alt text](screenshots/97b7727d-01.png)
+![alt text](screenshots/97b7727d-02.png)
+![alt text](screenshots/97b7727d-03.png)
+![alt text](screenshots/97b7727d-04.png)
+![alt text](screenshots/97b7727d-05.png)
+![alt text](screenshots/97b7727d-06.png)
+![alt text](screenshots/97b7727d-07.png)
+![alt text](screenshots/97b7727d-08.png)
+![alt text](screenshots/97b7727d-09.png)
+![alt text](screenshots/97b7727d-10.png)
+![alt text](screenshots/97b7727d-11.png)
