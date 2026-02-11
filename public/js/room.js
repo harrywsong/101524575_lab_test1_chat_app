@@ -51,6 +51,18 @@ document.getElementById('sendBtn').addEventListener('click', function() {
     }
 });
 
+// Send message when Enter key is pressed
+document.getElementById('messageInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        const message = this.value.trim();
+        if (message) {
+            socket.emit('group-message', { room: room, username: username, message: message });
+            this.value = '';
+            socket.emit('stop-typing', { room: room, username: username });
+        }
+    }
+});
+
 // Typing indicator
 document.getElementById('messageInput').addEventListener('input', function() {
     // If the input field is not empty, emit the typing indicator
