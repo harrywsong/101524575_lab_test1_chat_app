@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Lobby</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Welcome, <span id="username"></span></h2>
+                <button class="btn btn-danger btn-sm mb-3" id="logoutBtn">Logout</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Available Rooms</h3>
+                <div class="list-group" id="roomList">
+                    <button class="list-group-item list-group-item-action room-btn" data-room="devops">DevOps</button>
+                    <button class="list-group-item list-group-item-action room-btn" data-room="cloud computing">Cloud Computing</button>
+                    <button class="list-group-item list-group-item-action room-btn" data-room="covid19">COVID-19</button>
+                    <button class="list-group-item list-group-item-action room-btn" data-room="sports">Sports</button>
+                    <button class="list-group-item list-group-item-action room-btn" data-room="nodeJS">NodeJS</button>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <h3>Online Users</h3>
+                <div class="list-group" id="userList">
+                    <!-- Users will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/lobby.js"></script>
+</body>
+</html>
