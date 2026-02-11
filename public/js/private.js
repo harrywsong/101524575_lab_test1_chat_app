@@ -40,6 +40,18 @@ document.getElementById('sendBtn').addEventListener('click', function() {
     }
 });
 
+// Send message when Enter key is pressed
+document.getElementById('messageInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        const message = this.value.trim();
+        if (message) {
+            socket.emit('private-message', { from_user: username, to_user: targetUser, message: message });
+            this.value = '';
+            socket.emit('stop-typing-private', { to_user: targetUser });
+        }
+    }
+});
+
 // Typing indicator activation
 document.getElementById('messageInput').addEventListener('input', function() {
     // If the input field is not empty, emit the typing indicator
